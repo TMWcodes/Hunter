@@ -28,7 +28,7 @@ class Overworld {
  }
 
  init() {
-  this.map = new OverworldMap(window.OverworldMaps.GreenKitchen); 
+  this.map = new OverworldMap(window.OverworldMaps.GreenKitchen); //switch location
   this.startGameloop();
  
 
