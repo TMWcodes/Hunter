@@ -6,7 +6,7 @@ class OverworldMap {
         this.lowerImage.src = config.lowerSrc; //overcharacters
 
         this.UpperImage = new image();
-        this.upperImage = config.upperSrc; //overcharacters
+        this.upperImage.src = config.upperSrc; //overcharacters
         
     }
     drawLowerImage(ctx) {
@@ -21,37 +21,37 @@ class OverworldMap {
 window.OverworldMaps = {
     StreetNorthLower: {
         lowerSrc: "/images/maps/StreetNorthLower.png",
-        upperSrc:"/images/maps/StreetNorthUpper.png",
+        upperSrc: "/images/maps/StreetNorthUpper.png",
         gameObjects: {
             hero: new GameObject({
                 x: 3,
                 y: 1,
             }),
             
-            npcA: new GameObject({
+            npc1: new GameObject({
                 x: 9,
                 y: 2,
-                src: "/images/characters/people/npc6.png"
-            }),
+                src: "/images/characters/people/npc1.png"
+            })
         }
     },
 
     GreenKitchen: {
         lowerSrc: "/images/maps/GreenKitchenLower.png",
-        upperSrc:"/images/maps/GreenKitchenUpper.png",
+        upperSrc: "/images/maps/GreenKitchenUpper.png",
         gameObjects: {
             hero: new GameObject({
                 x: 3,
-                y: 1,
+                y: 2,
             }),
             
-            npcB: new GameObject({
-                x: 9,
+            npcA: new GameObject({
+                x: 4,
                 y: 2,
-                src: "/images/characters/people/npc6.png"
-            }),
+                src: "/images/characters/people/npc2.png"
+            })
         }
 
-    }
+    },
 }
   
