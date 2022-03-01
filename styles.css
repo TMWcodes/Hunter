@@ -16,7 +16,8 @@ body {
   margin: 0 auto;
   outline: 10px solid rgb(61, 60, 60);
 
-  transform: scale(3) translateY(50%);
+  transform: scale(2) translateY(50%);
+  /* scale = zoom */
 }
 
 .game-container canvas {

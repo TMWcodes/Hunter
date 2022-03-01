@@ -17,7 +17,6 @@ class Sprite {
             this.isShadowLoaded = true;
         }
        
-
         //configuring animation and initial state
         this.animations = config.animations || {
             idleDown: [
