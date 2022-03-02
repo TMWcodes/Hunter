@@ -35,11 +35,27 @@ window.OverworldMaps = {
               })
             }
           },
+    InnerNonNative: {
+        lowerSrc: "/images/maps/InnerNonNative.png",
+        upperSrc: "",
+        gameObjects: {
+            hero: new Person({
+                isPlayerControlled: true,
+                x: utils.withGrid(5),
+                y: utils.withGrid(6),
+                }),
+                npc1: new Person({
+                    x: utils.withGrid(7),
+                    y: utils.withGrid(9),
+                    src: "/images/characters/people/npc1.png"
+                  })
+                }
+            },
     GreenKitchen: {
         lowerSrc: "/images/maps/GreenKitchenLower.png",
         upperSrc: "/images/maps/GreenKitchenUpper.png",
         gameObjects: {
-            hero: new GameObject({
+            hero: new Person({
                 x: 6,
                 y: 7,
             }),
