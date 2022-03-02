@@ -9,11 +9,17 @@ class Overworld {
  startGameloop() {
    const step = () => {
     
+
+    //clears the canvas
+    this.ctx.clearRect(0,0, this.canvas.width, this.canvas.height);
     // draw lower layer
     this.map.drawLowerImage(this.ctx);
 
     //draw game objects
     Object.values(this.map.gameObjects).forEach(object => {
+      object.update({
+        arrow: this.directionInput.direction
+      })
        object.sprite.draw(this.ctx);
     })
     //draw upper layer
@@ -28,7 +34,11 @@ class Overworld {
  }
 
  init() {
-  this.map = new OverworldMap(window.OverworldMaps.GreenKitchen); //switch location
+  this.map = new OverworldMap(window.OverworldMaps.StreetNorthLower); //switch location
+  
+  this.directionInput = new DirectionInput();
+  this.directionInput.init();
+
   this.startGameloop();
  
 
